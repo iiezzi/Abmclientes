@@ -96,6 +96,7 @@ if ($_POST) {
     <script src="https://kit.fontawesome.com/40e341f8f7.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/fontawesome/css/all.min.css">
     <link rel="stylesheet" href="css/fontawesome/css/fontawesome.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 
 <body>
@@ -124,14 +125,14 @@ if ($_POST) {
                         <label for="">Correo: *</label>
                         <input type="text" name="txtCorreo" id="txtCorreo" class="form-control" required value="<?php echo isset($aClientes[$id]) ? $aClientes[$id]["correo"] : "";?>">
                     </div>
-                    <div class="py-2 pt-3">
-                        <label for="">Archivo adjunto</label>
+                    <div class="py-2 pt-3 file">
+                        <label for="archivo">Adjuntar imagen</label>
                         <input type="file" name="archivo" id="archivo" accept=".jpg, .jpeg, .png">
-                        <small class="d-block">Archivos admitidos: .jpg, .jpeg, .png</small>
+                        <small class="d-block" style="text-align: center;">Archivos admitidos: .jpg, .jpeg, .png</small>
                     </div>
                     <div>
-                        <button type="submit" class="btn btn-primary">Guardar</button>
-                        <a href="index.php" class="btn btn-danger my-2">Nuevo</a>
+                        <button type="submit" class="btn btn-success">Guardar</button>
+                        <a href="index.php" class="btn btn-primary my-2">Nuevo</a>
                     </div>
                 </form>
             </div>
@@ -150,9 +151,9 @@ if ($_POST) {
                             <td><?php echo $cliente["dni"]; ?></td>
                             <td><?php echo $cliente["nombre"]; ?></td>
                             <td><?php echo $cliente["correo"]; ?></td>
-                            <td>
-                                <a href="?id=<?php echo $pos; ?>"><i class="fa-solid fa-user-gear"></i></a> 
-                                <a href="?id=<?php echo $pos; ?>&do=eliminar"><i class="fa-solid fa-trash"></i></a>
+                            <td class="acciones ps-3">
+                                <a href="?id=<?php echo $pos; ?>" title="Editar"><i class="fa-solid fa-user-gear pe-2"></i></a> 
+                                <a href="?id=<?php echo $pos; ?>&do=eliminar" title="Eliminar"><i class="fa-solid fa-trash" ></i></a>
                             </td>
                         </tr>
                     <?php endforeach; ?>
