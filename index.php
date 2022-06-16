@@ -107,7 +107,7 @@ if ($_POST) {
             </div>
         </div>
         <div class="row">
-            <div class="col-6">
+            <div class="col-4">
                 <form action="" method="POST" enctype="multipart/form-data">
                     <div>
                         <label for="">DNI: *</label>
@@ -136,7 +136,7 @@ if ($_POST) {
                     </div>
                 </form>
             </div>
-            <div class="col-6">
+            <div class="col-8">
                 <table class="table table-hover border">
                     <tr>
                         <th>Imagen</th>
@@ -147,7 +147,7 @@ if ($_POST) {
                     </tr>
                     <?php foreach ($aClientes as $pos => $cliente) : ?>
                         <tr>
-                            <td><img src="imagenes/<?php echo $cliente["imagen"]; ?>" class="img-thumbnail"></td>
+                            <td><img src="imagenes/<?php echo $cliente["imagen"]; ?>" style="width: 80px;height: 80px;" class="img-thumbnail"></td>
                             <td><?php echo $cliente["dni"]; ?></td>
                             <td><?php echo $cliente["nombre"]; ?></td>
                             <td><?php echo $cliente["correo"]; ?></td>
