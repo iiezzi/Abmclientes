@@ -5,10 +5,10 @@ error_reporting(E_ALL);
 
 if (file_exists("archivo.txt")) {
     //si el archivo existe carga los datos a la variable
-    $strJson = file_get_contents("archivo.txt");
+    $strJson = file_get_contents("archivo.txt"); 
     $aClientes = json_decode($strJson, true);
 } else {
-    //si el archivo no existe es porque no hay datos o clientes
+    //si el archivo no existe es porque no hay datos o clientes nuevos
     $aClientes = array();
 }
 
